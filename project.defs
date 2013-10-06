@@ -1,0 +1,43 @@
+#
+# Main description
+#
+PROJECT=PCLFilter
+TARGET=lppagecnt
+TYPE="binary"
+#SUBPROJECTS="subproj1 subproj2"
+#
+## Custom Vars
+#
+#CUSTOM0=custom_string
+#
+# 
+# Includes..
+#
+INCLUDES=". ./includes"
+#
+# . "custom.defs"
+#
+#
+# Project specifics
+#
+#
+#PROJECT_SHELL=bash
+#
+#
+# Optional Project-defined rules
+#
+#
+# Destination directory for Object files
+#
+#
+OBJ_DIR="obj"
+#
+#
+# Directory with source files
+#
+#
+SRC_DIR="src"
+#
+#
+# --- End of File ---
+#

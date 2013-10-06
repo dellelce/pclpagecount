@@ -1,0 +1,6 @@
+PCL5/PCL-XL by Antonio Dell'elce
+
+** README FILE **
+
+This program is a partial implementation of a PCL parser
+its purpose is only count page in a PCL source.

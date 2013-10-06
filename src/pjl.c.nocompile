@@ -1,0 +1,51 @@
+/*
+ *
+ * PJL Parser code by Antonio Dell'elce.
+ *
+ * Very 'Beta' Quality.
+ *
+ * This code makes a few assumptions:
+ *
+ * - The sequence <NEWLINE><@> marks the start of PJL code line.
+ *
+ *
+ * THIS FILE IS NOT USED YET.
+ *
+ */
+
+#include "pcl.h"
+
+
+/* pjl_parser
+ * 
+ * This pjl_parser is the ....? 
+ *
+ */
+
+int
+pjl_parser (pcl_session_t *Session, char Input)
+{
+  switch (Session->Status)
+    {
+    case  PJL_STATUS_NORMAL:
+
+      /* Waiting for a Line '<NL><@>' or Token*/
+      
+      if (Ch == '@')
+	{
+	  
+	}
+
+      break;
+
+    case  PJL_STATUS_TOKEN:
+
+	  /* Reading a TOKEN */
+
+      break;
+
+    case  PJL_STATUS_WAIT:
+
+      break;
+    }  
+}
