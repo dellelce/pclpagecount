@@ -44,30 +44,30 @@ main (int argc, char **argv)
   if (!fname)
     {
       if (argc < 2)
-	{
-	  printf ("Not enough arguments. First argument must be a filename\n");
-	  return 1;
-	}
+        {
+          printf ("Not enough arguments. First argument must be a filename\n");
+          return 1;
+        }
 
       fname = argv[1];
 
       fh = fopen (fname, "r");
 
       if (!fh)
-	{
-	  printf ("Cannot open input file: %s\n", fname);
-	  return 1;
-	}
+        {
+          printf ("Cannot open input file: %s\n", fname);
+          return 1;
+        }
     }
   else
     {
       fh = fopen (fname, "r");
 
       if (!fh)
-	{
-	  printf ("Cannot open input file: %s\n", fname);
-	  return 1;
-	}
+        {
+          printf ("Cannot open input file: %s\n", fname);
+          return 1;
+        }
     }
      
 #endif
@@ -94,18 +94,18 @@ main (int argc, char **argv)
 
     if (!Var || !*Var)
       {
-	Var = DEFAULT_DEBUG_FILE;
+        Var = DEFAULT_DEBUG_FILE;
       }
 
     fh = fopen (Var, "a");
 
     if (!fh)
       {
-	printf ("** WARNING: Error while opening DEBUG file! DEBUGGING desabled!\n");
+        printf ("** WARNING: Error while opening DEBUG file! DEBUGGING desabled!\n");
       }
     else
       {
-	Session->DebugFH = fh;
+        Session->DebugFH = fh;
       }
   }
 #endif
@@ -116,9 +116,9 @@ main (int argc, char **argv)
 
       printf ("Error while parsing..\n");
       if (errno)
-	{
-	  perror ("finishing parsing");
-	}
+        {
+          perror ("finishing parsing");
+        }
 
       pcl_closesession (Session);
   

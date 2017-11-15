@@ -17,30 +17,30 @@
 
 xlvecitem_t pclxlvec[] =
   {
-    { 0, 0 },				/* 0  - 00 - White Space		*/
-    { 0, 0 },				/* 1  - 01 - NOT USED			*/
-    { 0, 0 },				/* 2  - 02 - NOT USED			*/
-    { 0, 0 },				/* 3  - 03 - NOT USED			*/
-    { 0, 0 },				/* 4  - 04 - NOT USED			*/
-    { 0, 0 },				/* 5  - 05 - NOT USED			*/
-    { 0, 0 },				/* 6  - 06 - NOT USED			*/
-    { 0, 0 },				/* 7  - 07 - NOT USED			*/
-    { 0, 0 },				/* 8  - 08 - NOT USED			*/
-    { 0, 0 },				/* 9  - 09 - White Space		*/
-    { 0, 0 },				/* 10 - 0a - White Space		*/
-    { 0, 0 },				/* 11 - 0b - White Space		*/
-    { 0, 0 },				/* 12 - 0c - White Space		*/
-    { 0, 0 },				/* 13 - 0d - White Space		*/
-    { 0, 0 },				/* 14 - 0e - NOT USED			*/
-    { 0, 0 },				/* 15 - 0f - NOT USED			*/
-    { 0, 0 },				/* 16 - 10 - NOT USED			*/
-    { 0, 0 },				/* 17 - 11 - NOT USED			*/
-    { 0, 0 },				/* 18 - 12 - NOT USED			*/
-    { 0, 0 },				/* 19 - 13 - NOT USED			*/
-    { 0, 0 },				/* 20 - 14 - NOT USED			*/
-    { 0, 0 },				/* 21 - 15 - NOT USED                   */
-    { 0, 0 },				/* 22 - 16 - NOT USED                   */
-    { 0, 0 },				/* 23 - 17 - NOT USED */
+    { 0, 0 },                                /* 0  - 00 - White Space                */
+    { 0, 0 },                                /* 1  - 01 - NOT USED                        */
+    { 0, 0 },                                /* 2  - 02 - NOT USED                        */
+    { 0, 0 },                                /* 3  - 03 - NOT USED                        */
+    { 0, 0 },                                /* 4  - 04 - NOT USED                        */
+    { 0, 0 },                                /* 5  - 05 - NOT USED                        */
+    { 0, 0 },                                /* 6  - 06 - NOT USED                        */
+    { 0, 0 },                                /* 7  - 07 - NOT USED                        */
+    { 0, 0 },                                /* 8  - 08 - NOT USED                        */
+    { 0, 0 },                                /* 9  - 09 - White Space                */
+    { 0, 0 },                                /* 10 - 0a - White Space                */
+    { 0, 0 },                                /* 11 - 0b - White Space                */
+    { 0, 0 },                                /* 12 - 0c - White Space                */
+    { 0, 0 },                                /* 13 - 0d - White Space                */
+    { 0, 0 },                                /* 14 - 0e - NOT USED                        */
+    { 0, 0 },                                /* 15 - 0f - NOT USED                        */
+    { 0, 0 },                                /* 16 - 10 - NOT USED                        */
+    { 0, 0 },                                /* 17 - 11 - NOT USED                        */
+    { 0, 0 },                                /* 18 - 12 - NOT USED                        */
+    { 0, 0 },                                /* 19 - 13 - NOT USED                        */
+    { 0, 0 },                                /* 20 - 14 - NOT USED                        */
+    { 0, 0 },                                /* 21 - 15 - NOT USED                   */
+    { 0, 0 },                                /* 22 - 16 - NOT USED                   */
+    { 0, 0 },                                /* 23 - 17 - NOT USED */
     { 0, 0 }, /* 24 - 18 - NOT USED */
     { 0, 0 }, /* 25 - 19 - NOT USED */
     { 0, 0 }, /* 26 - 1a - NOT USED */

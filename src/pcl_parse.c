@@ -96,94 +96,94 @@ pcl_parse (pclsession_t *Session)
 #endif
 
       switch (Session->Language)
-	{
+        {
 
-	case LANG_NONE:
+        case LANG_NONE:
 
-	  switch (Session->Status)
-	    {
-	    case NONE_STATUS_NULL:
+          switch (Session->Status)
+            {
+            case NONE_STATUS_NULL:
 
-	      if (Ch == PCL_ESCAPE)
-		{
-		  Session->Status = NONE_STATUS_NORMAL;
-		}
+              if (Ch == PCL_ESCAPE)
+                {
+                  Session->Status = NONE_STATUS_NORMAL;
+                }
 
-	      continue;
+              continue;
 
-	    case NONE_STATUS_NORMAL:
-	       
-	      if (Ch == 13)
-		{
-		  Session->Status = NONE_STATUS_NEWLINE;
-		}
+            case NONE_STATUS_NORMAL:
+               
+              if (Ch == 13)
+                {
+                  Session->Status = NONE_STATUS_NEWLINE;
+                }
 
-	      continue;
+              continue;
 
-	    case NONE_STATUS_NEWLINE:
+            case NONE_STATUS_NEWLINE:
 
-	      switch (Ch)
-		{
-		case ')':
-		  
-		  /* We found the PCL-XL comment/header */
+              switch (Ch)
+                {
+                case ')':
+                  
+                  /* We found the PCL-XL comment/header */
 
-		  Session->Status = NONE_STATUS_PREPCL6;
-		  continue;
+                  Session->Status = NONE_STATUS_PREPCL6;
+                  continue;
 
-		case PCL_ESCAPE:
-		  
-		  /* We found some PCL5 stuff */
+                case PCL_ESCAPE:
+                  
+                  /* We found some PCL5 stuff */
 
-		  printf ("Language : PCL\n");
+                  printf ("Language : PCL\n");
 
-		  Session->Language = LANG_PCL;
-		  Session->Status   = PCL_STATUS_COMMAND;
-		  Session->LocalStatus = 0;
-		  continue;
-		}
+                  Session->Language = LANG_PCL;
+                  Session->Status   = PCL_STATUS_COMMAND;
+                  Session->LocalStatus = 0;
+                  continue;
+                }
 
-	      break;
+              break;
 
-	    case NONE_STATUS_PREPCL6:
+            case NONE_STATUS_PREPCL6:
 
-	      /* we are processing characters in the PCL6 heading */
+              /* we are processing characters in the PCL6 heading */
 
-	      if (Ch == '\n')
-		{
-		  printf ("Language : PCLXL\n");
+              if (Ch == '\n')
+                {
+                  printf ("Language : PCLXL\n");
 
-		  Session->Language = LANG_PCLXL;
-		  Session->Status = PCLXL_STATUS_NORMAL;
-		}
+                  Session->Language = LANG_PCLXL;
+                  Session->Status = PCLXL_STATUS_NORMAL;
+                }
   
-	      break;
+              break;
 
-	    } /* switch (Status) */
+            } /* switch (Status) */
 
-	  continue;
+          continue;
 
-	case LANG_PCL:
+        case LANG_PCL:
 
-	  if (pcl5_parser (Session, Ch) != 0)
-	    {
-	      /* Failed .. Should process errors here? */
-	      return 1;
-	    }
-	  
-	  break;
+          if (pcl5_parser (Session, Ch) != 0)
+            {
+              /* Failed .. Should process errors here? */
+              return 1;
+            }
+          
+          break;
 
-	case LANG_PCLXL:
+        case LANG_PCLXL:
 
-	  if (pclxl_parser (Session, Ch) != 0)
-	    {
-	      /* Failed .. Should process errors here? */
-	      return 1;
-	    }
+          if (pclxl_parser (Session, Ch) != 0)
+            {
+              /* Failed .. Should process errors here? */
+              return 1;
+            }
 
-	  break;
-	} /* switch (..Language) */
+          break;
+        } /* switch (..Language) */
     } /* while (feof) : Reader Loop */
-	  
+          
   return 0;
 }
